@@ -36,15 +36,13 @@ func chanDemo() {
 }
 
 func bufferedChannel() {
-	c := make(chan int, 3)
+	c := make(chan int, 3) // buffer channel 比较省资源
 	go worker(0, c)
-
 	c <- 'a' + 0
 	c <- 'a' + 1
 	c <- 'a' + 2
 	c <- 'a' + 3
 	c <- 'a' + 4
-
 	time.Sleep(time.Millisecond)
 }
 
