@@ -22,3 +22,4 @@
 - buffered channel
 - range
 - 理论基础:Communication Sequential Process(CSP)
+- 不要通过共享内存来通信;通过通信来共享内存

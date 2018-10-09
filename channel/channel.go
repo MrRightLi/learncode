@@ -71,5 +71,5 @@ func main() {
 	fmt.Println("Channel close and range")
 	closeChannel()
 
-	// 当然在channel的发送者不发送之后,接受也就随着关闭
+	// 当然在channel的发送者不发送之xiaojie后,接受也就随着关闭
 }
