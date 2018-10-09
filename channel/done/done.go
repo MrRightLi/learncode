@@ -43,6 +43,11 @@ func chanDemo() {
 		//fmt.Printf("收到%c的done\n", 'a' + i)
 
 	}
+	// wait for all of them
+	for _, worker := range workers {
+		<-worker.done
+	}
+
 	for i := 0; i < 10; i++ {
 		workers[i].in <- 'A' + i
 		fmt.Printf("发送: %c\n", 'A' + i)
@@ -52,7 +57,6 @@ func chanDemo() {
 
 	// wait for all of them
 	for _, worker := range workers {
-		<-worker.done
 		<-worker.done
 	}
 }
