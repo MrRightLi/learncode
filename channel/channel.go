@@ -7,7 +7,7 @@ import (
 
 func worker(id int, c chan int) {
 	for {
-		fmt.Printf("Work %d received %c\n",
+		fmt.Printf("Work %d received %d\n",
 			id, <-c)
 	}
 }
@@ -22,7 +22,7 @@ func createWork(id int) chan<- int {
 }
 
 func chanDemo() {
-	var channels [10]chan<- int  // channel of type send-only type
+	var channels [10]chan<- int // channel of type send-only type
 	for i := 0; i < 10; i++ {
 		channels[i] = createWork(i)
 	}
@@ -46,8 +46,23 @@ func bufferedChannel() {
 	time.Sleep(time.Millisecond)
 }
 
+func closeChannel() {
+	c := make(chan int)
+	//c := make(chan int, 3)
+	go worker(0, c)
+	c <- 'a' + 0
+	c <- 'a' + 1
+	c <- 'a' + 2
+	c <- 'a' + 3
+	c <- 'a' + 4
+	close(c)
+	time.Sleep(time.Millisecond)
+}
+
 func main() {
 	//chanDemo()
 
-	bufferedChannel()
+	//bufferedChannel()
+
+	closeChannel()
 }
