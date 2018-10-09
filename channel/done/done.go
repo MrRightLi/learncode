@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+	"sync"
 )
 
 type worker struct {
 	in chan int
-	done chan bool
+	wg *sync.WaitGroup
 }
 
 func doWork(id int, worker worker) {
@@ -14,51 +15,42 @@ func doWork(id int, worker worker) {
 		for n := range worker.in {
 			fmt.Printf("Work %d received %c\n",
 			id, n)
-			worker.done <- true
+			worker.wg.Done()
 		}
 	}
 }
 
-func createWorker(id int) worker {
+func createWorker(id int, wg *sync.WaitGroup) worker {
 	worker := worker{
 		in: make(chan int),
-		done: make(chan bool),
+		wg: wg,
 	}
 	go func() {
 		doWork(id, worker)
 	}()
-
 	return worker
 }
 
 func chanDemo() {
+	var wg sync.WaitGroup
+
 	var workers [10]worker // channel of type send-only type
 	for i := 0; i < 10; i++ {
-		workers[i] = createWorker(i)
-	}
-	for i := 0; i < 10; i++ {
-		workers[i].in <- 'a' + i
-		fmt.Printf("发送: %c\n", 'a' + i)
-		//<-workers[i].done
-		//fmt.Printf("收到%c的done\n", 'a' + i)
-
-	}
-	// wait for all of them
-	for _, worker := range workers {
-		<-worker.done
+		workers[i] = createWorker(i, &wg)
 	}
 
-	for i := 0; i < 10; i++ {
-		workers[i].in <- 'A' + i
-		fmt.Printf("发送: %c\n", 'A' + i)
-		//<-workers[i].done
-		//fmt.Printf("收到%c的done\n", 'A' + i)
+	//wg.Add(20)
+	for i, worker := range workers {
+		wg.Add(1)
+		worker.in <- 'a' + i
 	}
 
-	// wait for all of them
-	for _, worker := range workers {
-		<-worker.done
+	for i, worker := range workers {
+		wg.Add(1)
+		worker.in <- 'A' + i
 	}
+
+	wg.Wait()
 }
 
 func main() {
