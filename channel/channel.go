@@ -8,18 +8,20 @@ import (
 func worker(id int, c chan int)  {
 	for {
 		//n := <-c
-		fmt.Printf("Work %d received %d\n",
+		fmt.Printf("Work %d received %c\n",
 			id, <-c)
 	}
 }
 
 func chanDemo() {
-	//var c chan int // c == nil
-	c := make(chan int)
-
-	go worker(0, c)
-	c <- 1
-	c <- 2
+	var channels [10]chan int
+	for i := 0; i < 10; i++ {
+		channels[i] = make(chan int)
+		go worker(i, channels[i])
+	}
+	for i := 0; i < 10; i++ {
+		channels[i] <- 'a' + i
+	}
 	time.Sleep(time.Millisecond)
 }
 
