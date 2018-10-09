@@ -22,6 +22,9 @@ func chanDemo() {
 	for i := 0; i < 10; i++ {
 		channels[i] <- 'a' + i
 	}
+	for i := 0; i < 10; i++ {
+		channels[i] <- 'A' + i
+	}
 	time.Sleep(time.Millisecond)
 }
 
