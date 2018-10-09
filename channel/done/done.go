@@ -1,3 +1,4 @@
+// 使用Channel来等待 goroutine的结束已经WaitGroup的使用
 package main
 
 import (
