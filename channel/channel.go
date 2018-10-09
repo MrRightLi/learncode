@@ -5,7 +5,8 @@ import (
 	"time"
 )
 
-func createWork(id int) chan int {
+func createWork(id int) chan<- int {
+
 
 	channel := make(chan int)
 	go func() {
@@ -19,7 +20,7 @@ func createWork(id int) chan int {
 }
 
 func chanDemo() {
-	var channels [10]chan int
+	var channels [10]chan<- int  // channel of type send-only type
 	for i := 0; i < 10; i++ {
 		channels[i] = createWork(i)
 	}
