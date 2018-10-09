@@ -62,9 +62,14 @@ func closeChannel() {
 }
 
 func main() {
-	//chanDemo()
+	fmt.Printf("Channel as first-class citizen")
+	chanDemo()
 
-	//bufferedChannel()
+	fmt.Println("Buffered channel")
+	bufferedChannel()
 
+	fmt.Println("Channel close and range")
 	closeChannel()
+
+	// 当然在channel的发送者不发送之后,接受也就随着关闭
 }
