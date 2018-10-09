@@ -39,15 +39,21 @@ func chanDemo() {
 	for i := 0; i < 10; i++ {
 		workers[i].in <- 'a' + i
 		fmt.Printf("发送: %c\n", 'a' + i)
-		<-workers[i].done
-		fmt.Printf("收到%c的done\n", 'a' + i)
+		//<-workers[i].done
+		//fmt.Printf("收到%c的done\n", 'a' + i)
 
 	}
 	for i := 0; i < 10; i++ {
 		workers[i].in <- 'A' + i
 		fmt.Printf("发送: %c\n", 'A' + i)
-		<-workers[i].done
-		fmt.Printf("收到%c的done\n", 'A' + i)
+		//<-workers[i].done
+		//fmt.Printf("收到%c的done\n", 'A' + i)
+	}
+
+	// wait for all of them
+	for _, worker := range workers {
+		<-worker.done
+		<-worker.done
 	}
 }
 
