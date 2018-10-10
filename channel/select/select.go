@@ -19,16 +19,46 @@ func generarot() chan int {
 	return out
 }
 
+
+func worker(id int, c chan int) {
+	for {
+		for n := range c {
+			time.Sleep(time.Second)
+			fmt.Printf("Work %d received %d\n",
+				id, n)
+		}
+	}
+}
+
+func createWork(id int) chan<- int {
+	channel := make(chan int)
+	go func() {
+		worker(id, channel)
+	}()
+
+	return channel
+}
+
 func main() {
 	//var c1, c2 chan int // c1, c2 = nil
 
 	var c1, c2 = generarot(), generarot()
+	var worker = createWork(0)
+
+	n := 0
+	hasValue := false
 	for {
+		var activeWorker chan<- int
+		if hasValue {
+			activeWorker = worker
+		}
 		select {
-		case n := <-c1:
-			fmt.Println("Received from c1: %c", n)
-		case n := <-c2:
-			fmt.Println("Received from c2: %c", n)
+		case n = <-c1:
+			hasValue = true
+		case n = <-c2:
+			hasValue = true
+		case activeWorker <- n:
+			hasValue = false
 			//default:
 			//fmt.Println("receive none")
 		}
