@@ -41,3 +41,8 @@
   否则:
 - - default子句，则执行该语句。
 - - 如果没有default字句，select将阻塞，直到某个通信可以运行；Go不会重新对channel或值进行求值。
+
+> 小结:
+- SELECT的使用
+- 定时器的使用
+- 在 Select 中使用 Nil Channel
