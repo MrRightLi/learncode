@@ -19,11 +19,10 @@ func generarot() chan int {
 	return out
 }
 
-
 func worker(id int, c chan int) {
 	for {
 		for n := range c {
-			time.Sleep(time.Second)
+			time.Sleep(time.Second/2)
 			fmt.Printf("Work %d received %d\n",
 				id, n)
 		}
@@ -45,20 +44,21 @@ func main() {
 	var c1, c2 = generarot(), generarot()
 	var worker = createWork(0)
 
-	n := 0
-	hasValue := false
+	var values []int
 	for {
 		var activeWorker chan<- int
-		if hasValue {
+		var activeValue int
+		if len(values) > 0 {
 			activeWorker = worker
+			activeValue = values[0]
 		}
 		select {
-		case n = <-c1:
-			hasValue = true
-		case n = <-c2:
-			hasValue = true
-		case activeWorker <- n:
-			hasValue = false
+		case n := <-c1:
+			values = append(values, n)
+		case n := <-c2:
+			values = append(values, n)
+		case activeWorker <- activeValue:
+			values = values[1:]
 			//default:
 			//fmt.Println("receive none")
 		}
