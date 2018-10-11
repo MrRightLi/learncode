@@ -50,5 +50,5 @@
 
 # 传统同步机制
 - WaitGroup
-- Mutex
-- Cond
+- Mutex  (一般不使用)
+- Cond   (一般不使用)
