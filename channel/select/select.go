@@ -45,6 +45,7 @@ func main() {
 	var worker = createWork(0)
 
 	var values []int
+	tm := time.After(10 * time.Second)
 	for {
 		var activeWorker chan<- int
 		var activeValue int
@@ -59,8 +60,11 @@ func main() {
 			values = append(values, n)
 		case activeWorker <- activeValue:
 			values = values[1:]
-			//default:
-			//fmt.Println("receive none")
+		case <-time.After(100 * time.Millisecond):
+			fmt.Println("timeout")
+		case <-tm:
+			fmt.Println("bye!")
+			return
 		}
 	}
 }
