@@ -46,3 +46,9 @@
 - SELECT的使用
 - 定时器的使用
 - 在 Select 中使用 Nil Channel
+
+
+# 传统同步机制
+- WaitGroup
+- Mutex
+- Cond
