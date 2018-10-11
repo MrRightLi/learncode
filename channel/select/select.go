@@ -46,6 +46,7 @@ func main() {
 
 	var values []int
 	tm := time.After(10 * time.Second)
+	tick := time.Tick(time.Second)
 	for {
 		var activeWorker chan<- int
 		var activeValue int
@@ -60,11 +61,13 @@ func main() {
 			values = append(values, n)
 		case activeWorker <- activeValue:
 			values = values[1:]
-		case <-time.After(100 * time.Millisecond):
+		case <-time.After(400 * time.Millisecond):
 			fmt.Println("timeout")
 		case <-tm:
 			fmt.Println("bye!")
 			return
+		case <-tick:
+			fmt.Println("queue len =", len(values))
 		}
 	}
 }
