@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d6f3748-71bb-4d02-bcf2-da8e74235b9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crawler/engine/types.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawler/fetcher/fetcher.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawler/tools/error.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawler/zhenai/parser/citylist.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crawler/zhenai/parser/citylist_test_data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/fetcher/fetcher.go" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/fetcher/fetcher.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/zhenai/parser/citylist_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/zhenai/parser/citylist_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,22 +78,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="12" />
+          <entry key="go" value="20" />
+          <entry key="html" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="12" />
+          <entry key="Go" value="20" />
+          <entry key="HTML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="1430" />
+          <entry key="go" value="2232" />
+          <entry key="html" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="1429" />
+          <entry key="Go" value="2231" />
+          <entry key="HTML" value="10" />
           <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
@@ -106,29 +108,68 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawler/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="19" selection-end-column="51" />
-              <folding>
-                <element signature="e#14#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crawler/zhenai/parser/citylist.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+            <state relative-caret-position="162">
+              <caret line="9" column="52" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawler/engine/types.go">
+        <entry file="file://$PROJECT_DIR$/crawler/engine/engine.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state relative-caret-position="783">
+              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+              <folding>
+                <element signature="e#16#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawler/zhenai/parser/citylist.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crawler/zhenai/parser/citylist_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#16#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawler/zhenai/parser/citylist_test_data.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7183">
+              <caret line="571" lean-forward="true" selection-start-line="571" selection-end-line="571" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawler/fetcher/fetcher.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/go/src/bufio/bufio.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="549" column="5" selection-start-line="549" selection-start-column="5" selection-end-line="549" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -140,8 +181,14 @@
       <list>
         <option value="Go Application" />
         <option value="Go File" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&lt;/body&gt;</find>
+    </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
@@ -154,14 +201,16 @@
         <option value="$PROJECT_DIR$/maze/maze.go" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/crawler/engine.go" />
-        <option value="$PROJECT_DIR$/crawler/engine/engine.go" />
         <option value="$PROJECT_DIR$/crawler/engine/concurrent.go" />
         <option value="$PROJECT_DIR$/base/regex/regex.go" />
         <option value="$PROJECT_DIR$/crawler/tools/error.go" />
-        <option value="$PROJECT_DIR$/crawler/fetcher/fetcher.go" />
-        <option value="$PROJECT_DIR$/crawler/main.go" />
         <option value="$PROJECT_DIR$/crawler/engine/types.go" />
+        <option value="$PROJECT_DIR$/crawler/main.go" />
+        <option value="$PROJECT_DIR$/crawler/engine/engine.go" />
         <option value="$PROJECT_DIR$/crawler/zhenai/parser/citylist.go" />
+        <option value="$PROJECT_DIR$/crawler/fetcher/fetcher.go" />
+        <option value="$PROJECT_DIR$/crawler/zhenai/parser/citylist_test_data.html" />
+        <option value="$PROJECT_DIR$/crawler/zhenai/parser/citylist_test.go" />
       </list>
     </option>
   </component>
@@ -220,6 +269,12 @@
               <item name="learncode" type="b2602c69:ProjectViewProjectNode" />
               <item name="learncode" type="462c0819:PsiDirectoryNode" />
               <item name="crawler" type="462c0819:PsiDirectoryNode" />
+              <item name="fetcher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learncode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learncode" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -227,6 +282,13 @@
               <item name="learncode" type="462c0819:PsiDirectoryNode" />
               <item name="crawler" type="462c0819:PsiDirectoryNode" />
               <item name="zhenai" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learncode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learncode" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+              <item name="zhenai" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,9 +298,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539437782576" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539441434860" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -263,7 +326,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
+  <component name="RunManager" selected="Go Test.TestParseCityList in project/learncode/crawler/zhenai/parser">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="google_code" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -300,14 +363,27 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="TestParseCityList in project/learncode/crawler/zhenai/parser" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="google_code" />
+      <working_directory value="$PROJECT_DIR$/crawler/zhenai/parser" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="project/learncode/crawler/zhenai/parser" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestParseCityList$" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Go Build.go build web.go" />
       <item itemvalue="Go Build.go build maze.go" />
       <item itemvalue="Go Build.go build main.go" />
       <item itemvalue="Go Build.go build regex.go" />
+      <item itemvalue="Go Test.TestParseCityList in project/learncode/crawler/zhenai/parser" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestParseCityList in project/learncode/crawler/zhenai/parser" />
         <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build regex.go" />
         <item itemvalue="Go Build.go build maze.go" />
@@ -328,12 +404,26 @@
       <workItem from="1539250552449" duration="1573000" />
       <workItem from="1539306958529" duration="17644000" />
       <workItem from="1539421290630" duration="5456000" />
-      <workItem from="1539433602781" duration="3060000" />
+      <workItem from="1539433602781" duration="6710000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TestParseCityList_in_project_learncode_crawler_zhenai_parser - 2018.10.13 at 22h 21m 22s.xml">
+      <configuration name="TestParseCityList in project/learncode/crawler/zhenai/parser" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestParseCityList_in_project_learncode_crawler_zhenai_parser - 2018.10.13 at 22h 31m 20s.xml">
+      <configuration name="TestParseCityList in project/learncode/crawler/zhenai/parser" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestParseCityList_in_project_learncode_crawler_zhenai_parser - 2018.10.13 at 22h 35m 31s.xml">
+      <configuration name="TestParseCityList in project/learncode/crawler/zhenai/parser" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestParseCityList_in_project_learncode_crawler_zhenai_parser - 2018.10.13 at 22h 36m 44s.xml">
+      <configuration name="TestParseCityList in project/learncode/crawler/zhenai/parser" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27733000" />
+    <option name="totallyTimeSpent" value="31383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -357,8 +447,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32979593" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39918366" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32979593" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.28816327" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32979593" />
@@ -494,20 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/engine/engine.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/engine/concurrent.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/base/regex/regex.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -522,6 +598,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/engine/concurrent.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crawler/tools/error.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -529,37 +612,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/fetcher/fetcher.go">
+    <entry file="file://$PROJECT_DIR$/crawler/engine/types.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state relative-caret-position="54">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/bufio/bufio.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="549" column="5" selection-start-line="549" selection-start-column="5" selection-end-line="549" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/zhenai/parser/citylist.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/engine/engine.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
           <folding>
-            <element signature="e#17#90#0" expanded="true" />
+            <element signature="e#16#70#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawler/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="19" selection-end-column="51" />
+        <state relative-caret-position="162">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/fetcher/fetcher.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/zhenai/parser/citylist_test_data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7183">
+          <caret line="571" lean-forward="true" selection-start-line="571" selection-end-line="571" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/zhenai/parser/citylist_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#14#41#0" expanded="true" />
+            <element signature="e#16#74#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/engine/types.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/zhenai/parser/citylist.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
         </state>
       </provider>
     </entry>
