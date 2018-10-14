@@ -17,11 +17,11 @@ func TestParseCityList(t *testing.T) {
 
 	const resultSize = 470
 
-	fmt.Println(len(result.Request))
+	fmt.Println(len(result.requests))
 
-	if len(result.Request) != resultSize {
+	if len(result.requests) != resultSize {
 		t.Errorf("result should have %d" +
-			"requests;but had %d", resultSize, len(result.Request))
+			"requests;but had %d", resultSize, len(result.requests))
 	}
 
 	if len(result.Items) != resultSize {
