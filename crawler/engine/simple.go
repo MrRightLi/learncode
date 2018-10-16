@@ -5,8 +5,7 @@ import (
 	"project/learncode/crawler/fetcher"
 )
 
-type Simpleengine struct {
-}
+type Simpleengine struct{}
 
 func (e Simpleengine) Run(seeds ...Request) {
 	var requests []Request
@@ -38,6 +37,5 @@ func worker(r Request) (ParseResult, error) {
 			"fetching url %s: %v", r.Url, err)
 		return ParseResult{}, err
 	}
-
 	return r.ParserFunc(body), nil
 }
