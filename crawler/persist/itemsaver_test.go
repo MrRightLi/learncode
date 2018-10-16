@@ -33,6 +33,8 @@ func TestSave(t *testing.T) {
 		panic(err)
 	}
 
+	// TODO: Try to start up elastic search
+	// hear using docker go clint
 	client, err := elastic.NewClient(elastic.SetSniff(false))
 
 	if err != nil {
